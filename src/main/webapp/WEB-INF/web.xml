@@ -8,14 +8,27 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 id="WebApp_ID" version="3.0">
 
 <servlet>
-	<servlet-name>sum</servlet-name>
+	<servlet-name>add</servlet-name>
 	<servlet-class>com.ting.AddServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-	<servlet-name>sum</servlet-name>
+	<servlet-name>add</servlet-name>
 	<url-pattern>/add</url-pattern>
 </servlet-mapping>
+
+
+
+<servlet>
+	<servlet-name>sq</servlet-name>
+	<servlet-class>com.ting.SqServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>sq</servlet-name>
+	<url-pattern>/sq</url-pattern>
+</servlet-mapping>
+
 
 </web-app>
 

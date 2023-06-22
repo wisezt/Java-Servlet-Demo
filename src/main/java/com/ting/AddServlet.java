@@ -11,22 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 public class AddServlet extends HttpServlet {
 
 	
-	public void service( HttpServletRequest req, HttpServletResponse res ) throws IOException {
-		
-		int num1 = Integer.parseInt(req.getParameter("num1"));
-		
-		int num2 = Integer.parseInt(req.getParameter("num2"));
-		
-		int sum = num1 + num2;
-		
-		System.out.print("service: " + sum);
-		
-		PrintWriter out = res.getWriter();
-		
-		out.append("service: The sum is " + sum);
-		
-	}
-	
 	public void doGet( HttpServletRequest req, HttpServletResponse res ) throws IOException {
 		
 		int num1 = Integer.parseInt(req.getParameter("num1"));
@@ -35,11 +19,14 @@ public class AddServlet extends HttpServlet {
 		
 		int sum = num1 + num2;
 		
-		System.out.print("doGet: " + sum);
+		System.out.println("doGet: " + sum);
 		
-		PrintWriter out = res.getWriter();
+//		PrintWriter out = res.getWriter();
+//		
+//		out.append("doGet: The sum is " + sum);
 		
-		out.append("doGet: The sum is " + sum);
+		res.sendRedirect("sq");
+		
 		
 	}
 	
